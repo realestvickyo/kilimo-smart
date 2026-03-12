@@ -62,6 +62,8 @@ const Chatbot: React.FC<{ lang: Language; isPremium: boolean }> = ({ lang, isPre
           className="flex-1 bg-stone-100 border-none rounded-xl px-4 py-2 text-sm focus:ring-2 focus:ring-emerald-500"
         />
         <button 
+          type="button"
+          title="Send message"
           onClick={handleSend}
           className="bg-emerald-600 text-white p-2 rounded-xl hover:bg-emerald-700"
         >

@@ -26,7 +26,11 @@ const ProfileView: React.FC<ProfileViewProps> = ({ farmer, setFarmer, lang, setL
           <div className="w-40 h-40 rounded-[3rem] bg-emerald-50 border-4 border-white shadow-2xl overflow-hidden mb-8">
             <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${farmer.name}`} alt="Profile" />
           </div>
-          <button className="absolute bottom-6 right-0 p-3.5 bg-emerald-600 text-white rounded-2xl border-4 border-white shadow-2xl hover:scale-110 active:scale-95 transition-transform">
+          <button 
+            type="button" 
+            title="Edit Profile Picture" 
+            className="absolute bottom-6 right-0 p-3.5 bg-emerald-600 text-white rounded-2xl border-4 border-white shadow-2xl hover:scale-110 active:scale-95 transition-transform"
+          >
              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
           </button>
         </div>
@@ -61,6 +65,7 @@ const ProfileView: React.FC<ProfileViewProps> = ({ farmer, setFarmer, lang, setL
                  value={editing ? formData[field.key] : farmer[field.key]} 
                  readOnly={!editing}
                  onChange={(e) => setFormData({ ...formData, [field.key]: e.target.value })}
+                 placeholder={`Enter ${field.label.toLowerCase()}`}
                  className={`w-full border-none rounded-2xl p-5 font-bold text-stone-900 transition-all ${editing ? 'bg-stone-50 ring-2 ring-emerald-500' : 'bg-stone-50'}`} 
                />
              </div>
