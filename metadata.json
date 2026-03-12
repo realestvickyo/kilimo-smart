@@ -1,0 +1,8 @@
+
+{
+  "name": "Kilimo Smart Advisor Pro",
+  "description": "A high-fidelity, hackathon-ready agritech dashboard for East African farmers featuring premium M-PESA upsells, yield tracking, cooperative views, and rule-based expert advice.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
